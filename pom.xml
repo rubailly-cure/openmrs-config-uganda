@@ -1,0 +1,44 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.cure</groupId>
+  <artifactId>openmrs-config-uganda</artifactId>
+  <name>OpenMRS config - Uganda</name>
+  <description>OpenMRS configuration for the CURE Uganda distribution</description>
+  <version>1.0.1</version>
+  <packaging>pom</packaging>
+
+  <developers>
+    <developer>
+      <name>Bailly RURANGIRWA</name>
+    </developer>
+  </developers>
+  <organization>
+    <name>CURE International</name>
+    <url>https://cure.org/</url>
+  </organization>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>create-distribution</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <appendAssemblyId>false</appendAssemblyId>
+              <descriptors>
+                <descriptor>src/main/assembly/assembly.xml</descriptor>
+              </descriptors>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
